@@ -1,0 +1,16 @@
+module.exports = {
+  purge: [],
+  darkMode: true,
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Montserrat', 'ui-sans-serif', 'system-ui'],
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
