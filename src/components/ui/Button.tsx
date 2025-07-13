@@ -7,7 +7,8 @@ type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export default function Button({ children, variant = 'primary', className, ...props }: ButtonProps) {
   const base =
-    'px-4 py-3 rounded-xl text-sm font-medium focus:outline-none transition';
+    'px-4 py-3 rounded-xl text-sm font-medium focus:outline-none transition font-extrabold cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed';
+
   const variants = {
     primary: 'bg-cyan-400 text-white hover:bg-cyan-500',
     secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300',

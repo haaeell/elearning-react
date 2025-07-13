@@ -51,14 +51,14 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
 
   return (
     <aside className={`relative ${open ? 'w-64' : 'w-20'} bg-white shadow h-screen p-4 transition-all duration-300`}>
-      <button
-        onClick={onToggle}
-        className="absolute -right-3 top-6 w-8 h-8 border rounded-full flex items-center justify-center shadow bg-cyan-400 text-white cursor-pointer"
-      >
+      <button onClick={onToggle} className="absolute -right-3 top-6 w-8 h-8 border rounded-full flex items-center justify-center shadow bg-cyan-400 text-white cursor-pointer">
         {open ? <ChevronLeft className="w-4 h-4" /> : <ChevronRight className="w-4 h-4" />}
       </button>
 
       <h1 className={`text-2xl font-bold mb-6 text-center transition-opacity ${open ? 'opacity-100' : 'opacity-0 h-0 overflow-hidden'}`}>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw5Xgq7X6eW90I2i_H2iSex2I8ZTt07WC8mw&s" alt="Logo"
+          className={`mx-auto ${open ? 'w-16 h-16' : 'w-10 h-10'} transition-all duration-300`}
+        />
         HOHOHO
       </h1>
 
@@ -73,7 +73,7 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
               <div key={index}>
                 <div
                   onClick={() => setOpenMenuIndex(isOpen ? null : index)}
-                  className={`flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100 cursor-pointer ${isOpen ? 'text-cyan-600 font-semibold' : 'text-gray-800'
+                  className={`flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100 cursor-pointer ${isOpen ? 'text-cyan-400 font-semibold' : 'text-gray-800'
                     }`}
                 >
                   {item.icon}
@@ -91,7 +91,7 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
                       key={sub.to}
                       to={sub.to}
                       className={({ isActive }) =>
-                        `block text-sm py-1 pr-2 rounded hover:bg-gray-100 ${isActive ? 'text-cyan-600 font-semibold' : 'text-gray-800'
+                        `block text-sm py-1 pr-2 rounded hover:bg-gray-100 ${isActive ? 'text-cyan-400 font-semibold' : 'text-gray-800'
                         }`
                       }
                     >
@@ -108,7 +108,7 @@ export default function Sidebar({ open, onToggle }: SidebarProps) {
               key={index}
               to={item.to!}
               className={({ isActive }) =>
-                `flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100 ${isActive ? 'text-cyan-600 font-semibold' : 'text-gray-800'
+                `flex items-center gap-3 px-3 py-2 rounded hover:bg-gray-100 ${isActive ? 'text-cyan-400 font-semibold' : 'text-gray-800'
                 }`
               }
             >
